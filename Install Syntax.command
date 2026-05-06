@@ -6,6 +6,17 @@ if [ ! -f "$ROOT/scripts/install-syntax.mjs" ] && [ -f "$HELPER_DIR/../scripts/i
 fi
 cd "$ROOT" || exit 1
 
+source_newer_than() {
+  ARTIFACT="$1"
+  for ITEM in     "$ROOT/package.json"     "$ROOT/package-lock.json"     "$ROOT/index.html"     "$ROOT/src"     "$ROOT/scripts"     "$ROOT/test"     "$ROOT/Logos"     "$ROOT/Install Syntax.command"
+  do
+    if [ -e "$ITEM" ] && find "$ITEM" -newer "$ARTIFACT" -print -quit | grep -q .; then
+      return 0
+    fi
+  done
+  return 1
+}
+
 if ! command -v node >/dev/null 2>&1; then
   LATEST_DMG=$(
     {
@@ -15,6 +26,13 @@ if ! command -v node >/dev/null 2>&1; then
     } | head -n 1
   )
   if [ -n "$LATEST_DMG" ]; then
+    if source_newer_than "$LATEST_DMG"; then
+      echo "node was not found, and the newest Syntax installer is older than the app source."
+      echo "Install Node.js, then run npm run package:mac so the macOS app includes the latest fixes."
+      printf "Press Return to close."
+      read REPLY
+      exit 1
+    fi
     open "$LATEST_DMG"
     exit 0
   fi
