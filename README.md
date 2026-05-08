@@ -15,7 +15,19 @@ The right-click `Open` step is required because this build is unsigned and not n
 
 ## Backup Helper
 
-If macOS still blocks the first launch, use `Backup Install.command` as a backup helper. Download it, right-click it, choose `Open`, and follow the prompts.
+Most users should not need `Backup Install.command`. It is only a fallback for cases where right-clicking `Syntax.app` does not work.
+
+Because this helper is also unsigned, double-clicking it can show the same Apple malware verification warning. If you need to use it:
+
+1. Download `Backup Install.command`.
+2. Open `Downloads`.
+3. Right-click `Backup Install.command`, then choose `Open`.
+4. If macOS still blocks it, open `System Settings` > `Privacy & Security`, scroll down, and choose `Open Anyway`.
+5. Follow the prompts.
+
+If you are not comfortable running the backup helper, skip it and use `System Settings` > `Privacy & Security` > `Open Anyway` for `Syntax.app` instead.
+
+Apple shows these warnings because this build is not signed or notarized with an Apple Developer account. The warning is expected for this private installer.
 
 ## Notes
 
