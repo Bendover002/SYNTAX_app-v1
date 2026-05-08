@@ -2,7 +2,17 @@
 
 ## macOS Download
 
-Easiest path: download this repository as a ZIP, unzip it, then double-click `Install Syntax.command`. The helper downloads, verifies, and opens the real DMG automatically.
+Easiest path:
+
+1. Click GitHub's green **Code** button.
+2. Click **Download ZIP**.
+3. Unzip the downloaded file.
+4. Double-click `Download Syntax Installer.html`.
+5. Open the downloaded `Syntax-Installer-0.1.2-universal.dmg`.
+
+The HTML file opens the real macOS installer download. It avoids GitHub's source-ZIP/LFS pointer problem, so customers do not accidentally open a fake 134-byte DMG.
+
+Advanced fallback: double-click `Install Syntax.command`. The helper downloads, verifies, and opens the real DMG automatically.
 
 You can also use this direct download link for the macOS installer:
 
@@ -16,4 +26,4 @@ Expected file:
 
 Do not download the installer from a `raw.githubusercontent.com` URL. That URL can return the Git LFS pointer text instead of the real DMG; the bad file is about 134 bytes and macOS will report it as corrupt.
 
-GitHub's **Code > Download ZIP** source archive is only for the helper files. It intentionally does not include the Git LFS installer binaries. Run `Install Syntax.command` from that ZIP instead of opening a DMG inside it.
+GitHub's **Code > Download ZIP** source archive is only for the download helper files. It intentionally does not include the Git LFS installer binaries. Use `Download Syntax Installer.html` from that ZIP instead of looking for a DMG inside it.
