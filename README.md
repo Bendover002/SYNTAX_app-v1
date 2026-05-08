@@ -21,8 +21,8 @@ https://media.githubusercontent.com/media/Bendover002/SYNTAX_app-v1/main/Syntax-
 Expected file:
 
 - Name: `Syntax-Installer-0.1.2-universal.dmg`
-- Size: `187654283` bytes
-- SHA-256: `b42c6a600c2c50da238301b17dbca2e33264fb87fcd3e1339fde1fcb5010179c`
+- Size: `187631008` bytes
+- SHA-256: `482d4d3cd31867ba2c39c8b70225cec35a0cc7ad28c1dc0916bd9a470b62d702`
 
 Do not download the installer from a `raw.githubusercontent.com` URL. That URL can return the Git LFS pointer text instead of the real DMG; the bad file is about 134 bytes and macOS will report it as corrupt.
 

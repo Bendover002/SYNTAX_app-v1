@@ -8,7 +8,7 @@ cd "$ROOT" || exit 1
 
 MAC_DMG_NAME="Syntax-Installer-0.1.2-universal.dmg"
 MAC_DMG_URL="https://media.githubusercontent.com/media/Bendover002/SYNTAX_app-v1/main/$MAC_DMG_NAME"
-MAC_DMG_SHA256="b42c6a600c2c50da238301b17dbca2e33264fb87fcd3e1339fde1fcb5010179c"
+MAC_DMG_SHA256="482d4d3cd31867ba2c39c8b70225cec35a0cc7ad28c1dc0916bd9a470b62d702"
 
 is_lfs_pointer() {
   ARTIFACT="$1"
