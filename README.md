@@ -15,13 +15,13 @@ The right-click `Open` step is required because this build is unsigned and not n
 
 ## Backup Helper
 
-Most users should not need `Backup Install.command`. It is only a fallback for cases where right-clicking `Syntax.app` does not work.
+Most users should not need `Backup Install.command` or `Fix Syntax First Launch.command`. They are fallbacks for cases where right-clicking `Syntax.app` does not work.
 
 Because this helper is also unsigned, double-clicking it can show the same Apple malware verification warning. If you need to use it:
 
-1. Download `Backup Install.command`.
+1. Download `Fix Syntax First Launch.command` or `Backup Install.command`.
 2. Open `Downloads`.
-3. Right-click `Backup Install.command`, then choose `Open`.
+3. Right-click the helper, then choose `Open`.
 4. If macOS still blocks it, open `System Settings` > `Privacy & Security`, scroll down, and choose `Open Anyway`.
 5. Follow the prompts.
 
@@ -33,3 +33,4 @@ Apple shows these warnings because this build is not signed or notarized with an
 
 - This installer is for Apple Silicon Macs (`arm64`).
 - Keep the DMG if you want to reinstall later.
+- `First Launch Help.txt` contains the same first-launch guidance in a plain text file.

@@ -1,0 +1,11 @@
+Syntax first launch help
+
+Install Syntax by dragging Syntax.app into Applications.
+
+macOS does not allow a DMG to automatically run a repair script when it mounts. If Syntax still shows "Apple could not verify Syntax is free of malware" after installation, use one of these first-launch fixes:
+
+1. Double-click "Fix Syntax First Launch.command" in this DMG after dragging Syntax.app to Applications.
+2. Right-click Syntax.app in Applications, then choose Open.
+3. Open System Settings, go to Privacy & Security, scroll down, then click Open Anyway for Syntax.
+
+The helper removes the local quarantine marker from /Applications/Syntax.app and applies a local ad-hoc signature only when the installed app is not Developer ID signed.
